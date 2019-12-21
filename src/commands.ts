@@ -227,6 +227,9 @@ export function RegisterCommands(exercismController: ExercismController, tracksT
             viewColumn: (i % 3) + 1
           });
         }
+        if (ExtensionManager.getConfigurationItem<boolean>("openTerminal", true)) {
+          vscode.commands.executeCommand("exercism.exercise.openInTerminal", exerciseNode);
+        }
       }
     },
     {
