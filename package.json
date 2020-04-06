@@ -474,7 +474,7 @@
     "@types/glob": "^7.1.1",
     "@types/marked": "^0.6.5",
     "@types/mocha": "^5.2.7",
-    "@types/node": "^10.17.17",
+    "@types/node": "^10.17.18",
     "@types/temp": "^0.8.34",
     "@types/vscode": "^1.43.0",
     "css-loader": "^3.4.2",

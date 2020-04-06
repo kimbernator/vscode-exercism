@@ -1,13 +1,11 @@
 # Changelog
 
-## v2
-
-## v2.0.0 (March 28th, 2020)
-
-- Bumped major version
-- Updated packages
-
 ## v1
+
+### v1.17.0 (April 6th, 2020)
+
+- Updated packages
+- Open terminal when clicking "open & start"
 
 ### v1.16.9 (December 9th, 2019)
 
