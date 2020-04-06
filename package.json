@@ -456,8 +456,6 @@
     ]
   },
   "scripts": {
-    "pretest": "tsc -p . && tsc -p webview",
-    "test": "node ./out/test",
     "build-dev": "webpack --mode development",
     "build-prod": "webpack --mode production",
     "build-debug": "tsc -w -p . && tsc -w -p webview",
@@ -465,26 +463,26 @@
     "vscode:prepublish": "npm run build-prod"
   },
   "devDependencies": {
-    "@types/cheerio": "^0.22.15",
+    "@types/cheerio": "^0.22.17",
     "@types/fs-extra": "^7.0.0",
     "@types/glob": "^7.1.1",
     "@types/marked": "^0.6.5",
     "@types/mocha": "^5.2.7",
-    "@types/node": "^10.17.7",
+    "@types/node": "^10.17.17",
     "@types/temp": "^0.8.34",
-    "@types/vscode": "^1.40.0",
-    "css-loader": "^3.3.0",
+    "@types/vscode": "^1.43.0",
+    "css-loader": "^3.4.2",
     "lodash": "^4.17.15",
-    "mocha": "^6.2.2",
+    "mocha": "^6.2.3",
     "style-loader": "^0.23.1",
-    "svelte": "^3.16.1",
+    "svelte": "^3.20.1",
     "svelte-loader": "^2.13.6",
     "temp": "^0.9.1",
-    "ts-loader": "^6.2.1",
-    "typescript": "^3.7.3",
-    "webpack": "^4.41.2",
-    "webpack-bundle-analyzer": "^3.6.0",
-    "webpack-cli": "^3.3.10"
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-bundle-analyzer": "^3.6.1",
+    "webpack-cli": "^3.3.11"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
