@@ -2,7 +2,7 @@
   "name": "exercism",
   "displayName": "Exercism",
   "description": "Complete programming challenges in different languages to improve your skills.",
-  "version": "1.16.9",
+  "version": "1.17.0",
   "author": "Mason D. Liu",
   "publisher": "masonliu",
   "license": "MIT",
@@ -16,7 +16,7 @@
     "url": "https://github.com/masliu/vscode-exercism/issues"
   },
   "engines": {
-    "vscode": "^1.40.0"
+    "vscode": "^1.43.0"
   },
   "galleryBanner": {
     "color": "#14a3ab",
