@@ -57,17 +57,18 @@ export function RegisterCommands(exercismController: ExercismController, tracksT
                 const exerciseNode = exerciseNodes[i];
                 progress.report({ message: exerciseNode.id, increment: (i / exerciseNodes.length) * 100 });
 
-                if (!(exerciseNode.exercise.status & ExerciseStatus.DOWNLOADED)) {
-                  while (true) {
-                    try {
-                      await exercismController.downloadExercise(trackNode.track, exerciseNode.exercise);
-                    } catch (e) {
-                      const action = await vscode.window.showErrorMessage(String(e), "Retry", "Cancel");
-                      if (action !== "Retry") {
-                        return;
-                      }
+                while (!(exerciseNode.exercise.status & ExerciseStatus.DOWNLOADED)) {
+                  try {
+                    await exercismController.downloadExercise(trackNode.track, exerciseNode.exercise);
+                  } catch (e) {
+                    const action = await vscode.window.showErrorMessage(String(e), "Retry", "Cancel");
+                    if (action !== "Retry") {
+                      return;
                     }
-                    tracksTreeProvider.refresh(exerciseNode);
+                  }
+                  tracksTreeProvider.refresh(exerciseNode);
+                  if (exerciseNode.exercise.status) {
+                    tracksTreeProvider.view.reveal(exerciseNode);
                   }
                 }
               }
